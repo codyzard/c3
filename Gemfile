@@ -5,6 +5,7 @@ ruby '2.6.1'
 gem 'rails-controller-testing'
 gem 'bootstrap-sass', '3.3.7'
 
+#has_secure_password
 gem 'bcrypt',         '3.1.12'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
@@ -25,6 +26,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
