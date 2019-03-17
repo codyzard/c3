@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
   	# user && => xac nhan user hop le
     if user && user.authenticate(params[:session][:password]) # ham nay trong has_secure_pw, dung de ma hoa pw da nhap vao
       log_in user # ham log_in duoc goi trong helpers/session_helper
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       redirect_to user
     else
       # Create an error message.
@@ -19,7 +20,7 @@ class SessionsController < ApplicationController
   end
   
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_url
   end
 end

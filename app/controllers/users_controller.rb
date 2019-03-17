@@ -16,11 +16,11 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to the Sample App!" # Handle a successful save.
       redirect_to @user # hoac redirect_to user_url(@user) # build lai web/user #nhung se khong vao trang thai dang nhap
     else
-    render 'new'
+    render 'new' # neu login k thanh cong render 'new.html'
     end
   end
 
-  def user_params
+  def user_params # strong params de tranh tham so thua truyen vao
   	params.require(:user).permit(:name, :email, :password, :password_confirmation)
   		   #tra ve 1 phien ban hash voi cac thuoc tinh cho phep nhu name, email, pw, pw_confirm
   end
