@@ -19,8 +19,10 @@ Rails.application.routes.draw do
 
   #user
   resources :users
+  get "/users", to: "users#index"
   get "/signup", to: "users#new"
-  post '/signup',  to: 'users#create'
+  post "/signup",  to: "users#create"
+  patch "/edit", to: "user#edit"
   
   
   #login session

@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password]) # ham nay trong has_secure_pw, dung de ma hoa pw da nhap vao
       log_in user # ham log_in duoc goi trong helpers/session_helper
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      redirect_to user
+      redirect_back_or user
+      #redirect_to user
     else
       # Create an error message.
       flash.now[:danger] = 'Invalid email/password combination' # Not quite right!
