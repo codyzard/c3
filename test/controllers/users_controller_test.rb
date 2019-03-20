@@ -45,7 +45,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     patch user_path(@other_user), params: {
                                     user: { password:              @other_user.password,
                                             password_confirmation: @other_user.password_confirmation,
-                                            admin: false} }
+                                            admin: true} }
     assert_not @other_user.admin?
   end
 
