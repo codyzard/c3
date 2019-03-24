@@ -11,7 +11,7 @@ gem 'will_paginate-bootstrap'
 gem 'bcrypt',         '3.1.12'
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.2'
+gem 'rails'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server

@@ -62,7 +62,7 @@ Rails.application.configure do
       :port => 587,
       :domain => "gmail.com",
       :user_name => "varusdamge@gmail.com",
-      :password => "tutien123", # khoang dung di doi t 1'
+      :password => "geniusgenius", # khoang dung di doi t 1'
       :authentication => "plain",
       :enable_starttls_auto => true
   }
