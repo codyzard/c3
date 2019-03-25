@@ -37,4 +37,7 @@ Rails.application.routes.draw do
 
   #password reset
   resources :password_resets, only: [:new, :create, :edit, :update]
+
+  #micropost
+  resources :microposts,only: [:create, :destroy]
 end

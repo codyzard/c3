@@ -11,6 +11,7 @@
   def show
   	# @user = User.find_by id: params[:id]
   		@user = User.find(params[:id])
+      @microposts = @user.microposts.paginate(page: params[:page])
      # redirect_to root_url and return unless @users.activated? # nani ? 
   end
 
@@ -64,14 +65,6 @@
     		   #tra ve 1 phien ban hash voi cac thuoc tinh cho phep nhu name, email, pw, pw_confirm
     end
 
-    #kiem tra xem user login chua?
-    def logged_in_user
-        unless logged_in?
-          store_location
-          flash[:danger] = "Please log in."
-          redirect_to login_url
-        end
-    end
 
     #kiem tra co phai dung nguoi dung do khong, tranh truong hop user 1 edit user 2
     def correct_user
